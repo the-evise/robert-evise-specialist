@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #02000a;
+    --text: #ffffff;
+    --accent: #7f2a24;
+    --text-accent: #c9aeaa;
+    --rule: rgba(127, 42, 36, 0.52);
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --bg-muted: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+}
+
+body {
+    line-height: 1.4;
+}

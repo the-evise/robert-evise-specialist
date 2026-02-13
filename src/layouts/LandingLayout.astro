@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+const { title = "Structural Execution Diagnostic" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Structural execution diagnostic for founders and product or engineering leaders."
+    />
+  </head>
+  <body>
+    <main class="w-full">
+      <article
+        class="mx-auto w-[min(84ch,calc(100vw-5.5rem))] border-l border-[var(--rule)] pb-[2.2rem] pl-[1.15rem] max-[640px]:w-[min(64ch,calc(100vw-2.2rem))] max-[640px]:pl-[0.7rem]"
+      >
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>

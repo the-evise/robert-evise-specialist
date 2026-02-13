@@ -1,0 +1,80 @@
+---
+import Button from '../components/Button.astro';
+import Callout from '../components/Callout.astro';
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const sectionClass = 'relative px-4 pb-8 pt-[2.2rem] max-[640px]:px-0 max-[640px]:pb-[1.7rem] max-[640px]:pt-[1.9rem]';
+const borderedSectionClass = `${sectionClass} border-t border-[var(--rule)]`;
+const sectionLabelClass =
+  'absolute right-[calc(100%+2.8rem)] top-1/2 m-0 w-[9.5rem] -translate-y-1/2 pr-[0.15rem] text-right text-[0.68rem] font-[620] uppercase tracking-[0.1em] leading-[1.1] text-white/55 max-[1200px]:hidden';
+const h1Class =
+  'mx-[0.1rem] my-6 max-w-[50ch] text-balance text-[clamp(2.2rem,5.4vw,3.5rem)] font-[720] leading-[1.2] tracking-[0.004em] capitalize';
+const h2Class =
+  'mx-[0.1rem] mb-[0.85rem] mt-6 max-w-[40ch] text-balance text-[clamp(1.25rem,3.2vw,1.7rem)] font-[620] leading-[1.18] tracking-[0.004em] capitalize text-[var(--text-accent)]';
+const paragraphClass = 'm-0 ml-4 max-w-[48ch] text-[1.02rem] text-[var(--text-muted)]';
+const listClass = 'm-0 grid list-disc gap-[0.35rem] pl-8 marker:text-[var(--accent)]';
+const listItemClass = 'max-w-[40ch] text-[var(--text-muted)] leading-[1.36]';
+---
+
+<LandingLayout title="Structural Execution Landing Page">
+  <section class="flex min-h-[42svh] flex-col justify-center gap-[0.6rem] px-0 py-0 max-[640px]:min-h-[62svh]">
+    <p class={sectionLabelClass}>Opening Statement</p>
+    <h1 class={h1Class}>Strong teams fail when structure is weak.</h1>
+    <p class={paragraphClass}>
+      I help founders and product/engineering leaders identify execution risks caused by team structure and decision design.
+    </p>
+  </section>
+
+  <section class={borderedSectionClass}>
+    <p class={sectionLabelClass}>The Problem</p>
+    <h2 class={h2Class}>Execution Breaks in Predictable Ways</h2>
+    <ul class={listClass}>
+      <li class={listItemClass}>Decisions stall or bounce between roles</li>
+      <li class={listItemClass}>Leaders become hidden bottlenecks</li>
+      <li class={listItemClass}>High performers clash without structural clarity</li>
+      <li class={listItemClass}>Delivery slows despite talent</li>
+      <li class={listItemClass}>"Culture issues" mask authority confusion</li>
+    </ul>
+  </section>
+
+  <section class={borderedSectionClass}>
+    <p class={sectionLabelClass}>Offer</p>
+    <h2 class={h2Class}>Team Execution Diagnostic (30 Days)</h2>
+    <p class={`${paragraphClass} mb-3`}>
+      I analyze how decisions are made, how authority is distributed, and where structural risk accumulates.
+    </p>
+    <ul class={listClass}>
+      <li class={listItemClass}>Decision flow mapping</li>
+      <li class={listItemClass}>Authority and ownership analysis</li>
+      <li class={listItemClass}>Role-outcome alignment review</li>
+      <li class={listItemClass}>Execution bottleneck identification</li>
+    </ul>
+    <Callout text="This is not coaching. This is structural correction." />
+  </section>
+
+  <section class={borderedSectionClass}>
+    <p class={sectionLabelClass}>What You Get</p>
+    <h2 class={h2Class}>Outputs</h2>
+    <ul class={listClass}>
+      <li class={listItemClass}>Clear decision ownership map</li>
+      <li class={listItemClass}>Identified execution risks</li>
+      <li class={listItemClass}>Structural redesign recommendations</li>
+      <li class={listItemClass}>Role clarity adjustments</li>
+      <li class={listItemClass}>Defined authority boundaries</li>
+    </ul>
+  </section>
+
+  <section class={borderedSectionClass}>
+    <p class={sectionLabelClass}>Why This Works</p>
+    <h2 class={h2Class}>Why This Approach</h2>
+    <p class={paragraphClass}>
+      Most execution problems are structural, not personal. When authority is clear and roles align with outcomes, friction decreases and delivery accelerates.
+    </p>
+  </section>
+
+  <section class={borderedSectionClass}>
+    <p class={sectionLabelClass}>Contact</p>
+    <p class={paragraphClass}>Open to a short conversation to assess structural risk in your team.</p>
+    <Button href="mailto:contact@yourdomain.com" label="Start Conversation" />
+  </section>
+</LandingLayout>
